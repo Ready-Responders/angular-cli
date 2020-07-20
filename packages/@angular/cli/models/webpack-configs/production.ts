@@ -148,6 +148,7 @@ export function getProdConfig(wco: WebpackConfigOptions) {
   }
 
   return {
+    devtool: buildOptions.sourcemaps ? 'hidden-source-map' : false,
     entry: entryPoints,
     plugins: [
       new webpack.EnvironmentPlugin({
